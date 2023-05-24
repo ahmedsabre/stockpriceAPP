@@ -40,7 +40,7 @@ if menu== 'stationarity':
 
     def raw_plot_data():
         fig = go.Figure()
-        fig.add_trace(go.Scatter(x=data2.index, y=data2['Open'], name=f'{ticker} Stock Open'))
+        fig.add_trace(go.Scatter(x=data2.index, y=data2['Open'], name=f'{ticker} Stock Open',line_color='red'))
         fig.add_trace(go.Scatter(x=data2.index, y=data2['Close'], name=f'{ticker} Stock Close'))
         fig.layout.update(title_text='Time Series Data',xaxis_rangeslider_visible=True) 
         st.plotly_chart(fig)
